@@ -1,20 +1,17 @@
 #ifndef CLASE_RECURSO
 #define CLASE_RECURSO
 #include <iostream>
-using namespace std;
-
+//#include "Inventario.h"
+class Inventario;
 class Recurso{
-private:
-    int num;    
+private:    
 public:
-    Recurso(int num) : num(num) {}
-    void imprimir(){
-        cout << num;
-    }
-    int getNum() const{
-        return num;
-    }
+    Recurso(const Recurso& copia) = default;
+    Recurso& operator=(Recurso& copia);
+    Recurso(Recurso&& recurso);
+    Recurso& operator=(Recurso&& recurso);
 
+    virtual void agregarAInventario(Inventario&& inventario) const;
 };
 
 #endif
