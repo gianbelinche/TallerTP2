@@ -1,10 +1,11 @@
 #ifndef COLA_BLOQUEANTE
 #define COLA_BLOQUEANTE
 
+#include "Recurso.h"
 #include <mutex>
 #include <queue>
 #include <condition_variable>
-#include "Recurso.h"
+
 
 class ColaBloqueante {
 private:

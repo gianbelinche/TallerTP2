@@ -36,17 +36,16 @@ void ColaBloqueante::cerrar(){
     cv.notify_all();
 }
 
-ColaBloqueante::~ColaBloqueante() {};
+ColaBloqueante::~ColaBloqueante() {}
 
 /*
 class ThreadProv{
     private:
     ColaBloqueante& cola;
-    Recurso& recurso;
     public:
-        ThreadProv(ColaBloqueante&& cola, Recurso&& recurso) : cola(cola), recurso(recurso) {}
+        ThreadProv(ColaBloqueante&& cola) : cola(cola) {}
         void operator()(){
-            cola.encolar(recurso);
+            cola.desencolar();
         }
 };
 
@@ -54,17 +53,17 @@ int main(){
     ColaBloqueante cola;
     Recurso trigo(1);
     Recurso madera(2);
-    ThreadProv t1(std::move(cola),std::move(trigo));
-    ThreadProv t2(std::move(cola),std::move(madera));
+    cola.encolar(trigo);
+    cola.encolar(madera);
+    ThreadProv t1(std::move(cola));
+    ThreadProv t2(std::move(cola));
     std::thread thr1(t1);
     std::thread thr2(t2);
     thr1.join();
     thr2.join();
-    Recurso trigo2 = cola.desencolar();
-    Recurso madera2 = cola.desencolar();
-    
-    trigo2.imprimir();
-    madera2.imprimir();
+    std::cout << "\n";
     return 0;
 }
 */
+
+
