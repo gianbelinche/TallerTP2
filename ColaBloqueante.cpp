@@ -1,5 +1,4 @@
 #include "ColaBloqueante.h"
-#include <thread>
 #include <unistd.h>
 
 class ColaEstaCerradaException : public std::exception {

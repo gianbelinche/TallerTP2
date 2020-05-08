@@ -14,8 +14,8 @@ private:
 public:
     Inventario() : cant_trigo(0), cant_madera(0),
     cant_hierro(0), cant_carbon(0){}
-    Inventario(Inventario& copia) = delete;
-    Inventario& operator=(Inventario& copia) = delete;
+    Inventario(const Inventario& copia) = delete;
+    Inventario& operator=(const Inventario& copia) = delete;
 
     void agregarTrigo();
     void agregarMadera();
@@ -26,6 +26,7 @@ public:
         int total = cant_trigo + cant_madera + cant_hierro + cant_carbon;
         std::cout << total;
     }
+    ~Inventario() {}
 };
 
 
