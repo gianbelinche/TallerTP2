@@ -6,10 +6,12 @@ class Inventario;
 
 class Trigo : public Recurso{
 public:
+    Trigo() {}
     Trigo(Trigo&& trigo) = delete;
     Trigo& operator=(Trigo&& trigo) = delete;
 
-    void agregarAInventario(Inventario&& inventario) const override;
+    virtual void agregarAInventario(Inventario&& inventario) const override;
+    virtual ~Trigo() {}
 };
 
 #endif

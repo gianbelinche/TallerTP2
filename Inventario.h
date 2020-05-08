@@ -2,6 +2,7 @@
 #define CLASE_INVENTARIO
 
 #include <mutex>
+#include "iostream"
 
 class Inventario{
 private:
@@ -20,6 +21,11 @@ public:
     void agregarMadera();
     void agregarHierro();
     void agregarCarbon();
+
+    void print(){
+        int total = cant_trigo + cant_madera + cant_hierro + cant_carbon;
+        std::cout << total;
+    }
 };
 
 

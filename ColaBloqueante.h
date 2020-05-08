@@ -11,7 +11,7 @@ class ColaBloqueante {
 private:
     bool esta_cerrada;
     std::mutex m;
-    std::queue<Recurso> cola;
+    std::queue<const Recurso*> cola;
     std::condition_variable cv;
 
 public:
@@ -20,8 +20,8 @@ public:
     ColaBloqueante& operator=(const ColaBloqueante& copia) = delete;
     //ColaBloqueante(ColaBloqueante&& otra) = delete; //No se si tiene que ser asi
     //ColaBloqueante& operator=(const ColaBloqueante&& otra) = delete; //No se si tiene que ser asi
-    void encolar(const Recurso& recurso);
-    Recurso desencolar();
+    void encolar(const Recurso* recurso);
+    const Recurso* desencolar();
     void cerrar();
     ~ColaBloqueante();
 };

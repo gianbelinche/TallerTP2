@@ -5,10 +5,12 @@ class Inventario;
 
 class Hierro : public Recurso {
 public:
+    Hierro() {}
     Hierro(Hierro&& hierro) = delete;
     Hierro& operator=(Hierro&& hierro) = delete;
 
-    void agregarAInventario(Inventario&& inventario) const override;
+    virtual void agregarAInventario(Inventario&& inventario) const override;
+    virtual ~Hierro() {}
 };
 
 #endif

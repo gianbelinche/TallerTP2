@@ -11,13 +11,13 @@ public:
 
 ColaBloqueante::ColaBloqueante() : esta_cerrada(false){}
 
-void ColaBloqueante::encolar(const Recurso& recurso){
+void ColaBloqueante::encolar(const Recurso* recurso){
     std::unique_lock<std::mutex> lk(m);
     cola.push(recurso);
     cv.notify_all();
 }
 
-Recurso ColaBloqueante::desencolar(){
+const Recurso* ColaBloqueante::desencolar(){
     std::unique_lock<std::mutex> lk(m);
     while (cola.empty()){
         if (esta_cerrada){
@@ -25,7 +25,7 @@ Recurso ColaBloqueante::desencolar(){
         }
         cv.wait(lk);
     }
-    Recurso recurso = cola.front();
+    const Recurso* recurso = cola.front();
     cola.pop();
     return recurso;
 }
@@ -37,33 +37,4 @@ void ColaBloqueante::cerrar(){
 }
 
 ColaBloqueante::~ColaBloqueante() {}
-
-/*
-class ThreadProv{
-    private:
-    ColaBloqueante& cola;
-    public:
-        ThreadProv(ColaBloqueante&& cola) : cola(cola) {}
-        void operator()(){
-            cola.desencolar();
-        }
-};
-
-int main(){
-    ColaBloqueante cola;
-    Recurso trigo(1);
-    Recurso madera(2);
-    cola.encolar(trigo);
-    cola.encolar(madera);
-    ThreadProv t1(std::move(cola));
-    ThreadProv t2(std::move(cola));
-    std::thread thr1(t1);
-    std::thread thr2(t2);
-    thr1.join();
-    thr2.join();
-    std::cout << "\n";
-    return 0;
-}
-*/
-
 
