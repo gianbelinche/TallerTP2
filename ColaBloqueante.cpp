@@ -1,12 +1,6 @@
 #include "ColaBloqueante.h"
 #include <unistd.h>
-
-class ColaEstaCerradaException : public std::exception {
-public:
-    const char* what() {
-        return "La cola esta cerrada";
-    }    
-};
+#include "ColaEstaCerradaException.h"
 
 ColaBloqueante::ColaBloqueante() : esta_cerrada(false){}
 
