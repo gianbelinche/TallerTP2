@@ -4,6 +4,8 @@
 #include "Inventario.h"
 #include "ColaBloqueante.h"
 #include <thread>
+#include <unistd.h>
+#include "ColaEstaCerradaException.h"
 
 class RecolectorInterno {
 protected:
@@ -11,8 +13,15 @@ protected:
     Inventario& inventario;
 public:
     void operator()(){
-        const Recurso* r = cola.desencolar();
-        r->agregarAInventario(std::move(inventario));
+        while (true){
+            try{
+                const Recurso* r = cola.desencolar();
+                usleep(50000);
+                r->agregarAInventario(std::move(inventario));
+            } catch (ColaEstaCerradaException& e) {
+                break;
+            }
+        }
     }  
     RecolectorInterno(ColaBloqueante&& cola,Inventario&& inventario) :
     cola(cola), inventario(inventario) {}

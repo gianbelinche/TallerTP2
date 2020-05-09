@@ -15,6 +15,8 @@ public:
     Recolector(ColaBloqueante&& cola,Inventario&& inventario) : rec_interno(std::move(cola),std::move(inventario)) {}
     Recolector(Recolector& copia) = delete;
     Recolector& operator=(Recolector& copia) = delete;
+    Recolector(Recolector&& recolector) = default;
+    Recolector& operator=(Recolector&& recolector) = default;
     void empezar();
     void terminar();
     ~Recolector();
