@@ -10,6 +10,7 @@ void PuntosDeBeneficio::aumentarPuntos(const int cant_puntos){
 }
 
 void PuntosDeBeneficio::printear() const {
+    std::cout << "Puntos de Beneficio acumulados: ";
     std::cout << puntos;
     std::cout << "\n";
 }
