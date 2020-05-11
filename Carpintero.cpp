@@ -1,5 +1,7 @@
 #include "Carpintero.h"
 #include "CarpinteroInterno.h"
+#include "PuntosDeBeneficio.h"
+#include "Inventario.h"
 
 Carpintero::Carpintero(Inventario&& inventario,PuntosDeBeneficio&& puntos) : 
 carpintero_interno(CarpinteroInterno(std::move(inventario),std::move(puntos))){}

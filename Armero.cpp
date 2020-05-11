@@ -1,5 +1,7 @@
 #include "Armero.h"
 #include "ArmeroInterno.h"
+#include "PuntosDeBeneficio.h"
+#include "Inventario.h"
 
 Armero::Armero(Inventario&& inventario,PuntosDeBeneficio&& puntos) : 
 armero_interno(ArmeroInterno(std::move(inventario),std::move(puntos))) {}

@@ -1,9 +1,11 @@
 #ifndef CLASE_CARPINTERO
 #define CLASE_CARPINTERO
-#include "Inventario.h"
+
 #include "Productor.h"
-#include "CarpinteroInterno.h"
-#include "PuntosDeBeneficio.h"
+
+class Inventario;
+class CarpinteroInterno;
+class PuntosDeBeneficio;
 
 class Carpintero : public Productor {
 private:

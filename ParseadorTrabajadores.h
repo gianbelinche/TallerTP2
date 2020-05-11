@@ -1,7 +1,6 @@
 #ifndef CLASE_PARSEADOR_TRABAJADORES
 #define CLASE_PARSEADOR_TRABAJADORES
-#include <iostream>
-#include <fstream>
+
 #include <string>
 #include "Parseador.h"
 

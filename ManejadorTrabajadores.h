@@ -1,13 +1,18 @@
 #ifndef CLASE_MANEJADOR_TRABAJADORES
 #define CLASE_MANEJADOR_TRABAJADORES
-#include "Agricultor.h"
-#include "Minero.h"
-#include "Lenador.h"
-#include "Armero.h"
-#include "Carpintero.h"
-#include "Cocinero.h"
+
 #include <vector>
-#include "ParseadorTrabajadores.h"
+
+class Armero;
+class Carpintero;
+class Cocinero;
+class Agricultor;
+class Lenador;
+class Minero;
+class ParseadorTrabajadores;
+class Inventario;
+class ColaBloqueante;
+class PuntosDeBeneficio;
 
 class ManejadorTrabajadores {
 private:

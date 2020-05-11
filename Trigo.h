@@ -3,7 +3,6 @@
 #include "Recurso.h"
 class Inventario;
 
-
 class Trigo : public Recurso{
 public:
     Trigo() {}

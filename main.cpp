@@ -4,7 +4,6 @@
 #include "Carbon.h"
 #include "Madera.h"
 #include "Hierro.h"
-#include "Recolector.h" //
 #include "ParseadorTrabajadores.h"
 #include "ParseadorMateriasPrimas.h"
 #include "PuntosDeBeneficio.h"

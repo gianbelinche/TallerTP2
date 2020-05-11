@@ -1,14 +1,14 @@
 #ifndef CLASE_PARSEADOR_MATERIAS_PRIMAS
 #define CLASE_PARSEADOR_MATERIAS_PRIMAS
 #include "Parseador.h"
-#include <iostream>
-#include <fstream>
 #include <string>
-#include "ColaBloqueante.h"
-#include "Trigo.h"
-#include "Madera.h"
-#include "Carbon.h"
-#include "Hierro.h"
+
+class ColaBloqueante;
+class Trigo;
+class Madera;
+class Carbon;
+class Hierro;
+
 
 class ParseadorMateriasPrimas : public Parseador{
 private:

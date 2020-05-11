@@ -1,4 +1,9 @@
 #include "ParseadorMateriasPrimas.h"
+#include "Trigo.h"
+#include "Madera.h"
+#include "Carbon.h"
+#include "Hierro.h"
+#include "ColaBloqueante.h"
 #include <string>
 
 ParseadorMateriasPrimas::ParseadorMateriasPrimas(

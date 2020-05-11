@@ -1,9 +1,11 @@
 #ifndef CLASE_COCINERO
 #define CLASE_COCINERO
-#include "Inventario.h"
+
 #include "Productor.h"
-#include "CocineroInterno.h"
-#include "PuntosDeBeneficio.h"
+
+class Inventario;
+class CocineroInterno;
+class PuntosDeBeneficio;
 
 class Cocinero : public Productor {
 private:

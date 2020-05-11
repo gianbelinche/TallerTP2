@@ -2,7 +2,8 @@
 #define CLASE_CARPINTERO_INTERNO
 #include "ProductorInterno.h"
 #include "Inventario.h"
-#include "PuntosDeBeneficio.h"
+
+class PuntosDeBeneficio;
 
 class CarpinteroInterno : public ProductorInterno {
 public:

@@ -2,8 +2,8 @@
 #define CLASE_COCINERO_INTERNO
 #include "ProductorInterno.h"
 #include "Inventario.h"
-#include "PuntosDeBeneficio.h"
-class Inventario;
+
+class PuntosDeBeneficio;
 
 class CocineroInterno : public ProductorInterno {
 public:

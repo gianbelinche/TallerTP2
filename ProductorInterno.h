@@ -3,6 +3,7 @@
 
 class PuntosDeBeneficio;
 class Inventario;
+
 class ProductorInterno {
 protected:
     Inventario& inventario;

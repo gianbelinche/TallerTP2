@@ -1,4 +1,7 @@
 #include "RecolectorInterno.h"
+#include "Inventario.h"
+#include "ColaBloqueante.h"
+#include "ColaEstaCerradaException.h"
 #define TIEMPO_ESPERA 50000
 
 void RecolectorInterno::recolectar(){

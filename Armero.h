@@ -1,9 +1,11 @@
 #ifndef CLASE_ARMERO
 #define CLASE_ARMERO
-#include "Inventario.h"
+
 #include "Productor.h"
-#include "ArmeroInterno.h"
-#include "PuntosDeBeneficio.h"
+
+class ArmeroInterno;
+class PuntosDeBeneficio;
+class Inventario;
 
 class Armero : public Productor {
 private:

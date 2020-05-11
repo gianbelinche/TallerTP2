@@ -2,7 +2,8 @@
 #define CLASE_ARMERO_INTERNO
 #include "ProductorInterno.h"
 #include "Inventario.h"
-#include "PuntosDeBeneficio.h"
+
+class PuntosDeBeneficio;
 
 class ArmeroInterno : public ProductorInterno {
 public:

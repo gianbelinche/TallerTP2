@@ -1,4 +1,11 @@
 #include "ManejadorTrabajadores.h"
+#include "Armero.h"
+#include "Agricultor.h"
+#include "Minero.h"
+#include "Lenador.h"
+#include "Carpintero.h"
+#include "Cocinero.h"
+#include "ParseadorTrabajadores.h"
 
 ManejadorTrabajadores::ManejadorTrabajadores(ParseadorTrabajadores& parser) :
     vector_cocineros(parser.cant_cocineros), 

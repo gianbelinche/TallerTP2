@@ -1,10 +1,10 @@
 #ifndef CLASE_RECOLECTOR_INTERNO
 #define CLASE_RECOLECTOR_INTERNO
 
-#include "Inventario.h"
-#include "ColaBloqueante.h"
 #include <unistd.h>
-#include "ColaEstaCerradaException.h"
+
+class Inventario;
+class ColaBloqueante;
 
 class RecolectorInterno {
 protected:

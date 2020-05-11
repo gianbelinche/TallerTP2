@@ -1,10 +1,10 @@
 #ifndef CLASE_RECOLECTOR
 #define CLASE_RECOLECTOR
 
-#include "Inventario.h"
-#include "ColaBloqueante.h"
 #include "RecolectorInterno.h"
 #include <thread>
+class Inventario;
+class ColaBloqueante;
 
 class Recolector {
 protected:

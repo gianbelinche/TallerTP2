@@ -1,6 +1,6 @@
 #ifndef CLASE_RECURSO
 #define CLASE_RECURSO
-#include <iostream>
+
 class Inventario;
 class Recurso{
 private:    
