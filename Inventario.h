@@ -4,9 +4,9 @@
 #include <mutex>
 #include "iostream"
 #include <condition_variable>
-#include "CocineroInterno.h"
-#include "CarpinteroInterno.h"
-#include "ArmeroInterno.h"
+#include "CocineroInterno.h" //
+#include "CarpinteroInterno.h" //
+#include "ArmeroInterno.h" //
 #include "InventarioEstaCerradoException.h"
 class CocineroInterno;  //Aunque parezca repetitivo, realizo esto debido a que
 class CarpinteroInterno; //por temas de includes en compilacion, necesita

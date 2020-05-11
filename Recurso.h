@@ -1,7 +1,6 @@
 #ifndef CLASE_RECURSO
 #define CLASE_RECURSO
 #include <iostream>
-//#include "Inventario.h"
 class Inventario;
 class Recurso{
 private:    
@@ -13,6 +12,7 @@ public:
     Recurso& operator=(Recurso&& recurso);
 
     virtual void agregarAInventario(Inventario&& inventario) const {}
+    ~Recurso() {}
 };
 
 #endif

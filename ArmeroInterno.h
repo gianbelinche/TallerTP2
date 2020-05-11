@@ -9,6 +9,7 @@ public:
     ArmeroInterno(Inventario&& inventario,PuntosDeBeneficio&& puntos) : 
     ProductorInterno(std::move(inventario),std::move(puntos)) {}
     void producir() override;
+    ~ArmeroInterno() {}
 };
 
 #endif

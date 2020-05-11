@@ -25,6 +25,7 @@ public:
     ColaBloqueante&& cola_lenador, ColaBloqueante&& cola_minero);    
     void terminarRecolectores();
     void terminarProductores();
+    ~ManejadorTrabajadores() {}
 };
 
 #endif

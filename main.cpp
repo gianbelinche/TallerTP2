@@ -4,19 +4,9 @@
 #include "Carbon.h"
 #include "Madera.h"
 #include "Hierro.h"
-//#include <thread>
-#include "Recolector.h"
-
+#include "Recolector.h" //
 #include "ParseadorTrabajadores.h"
 #include "ParseadorMateriasPrimas.h"
-/*
-#include "Agricultor.h"
-#include "Minero.h"
-#include "Lenador.h"
-#include "Armero.h"
-#include "Carpintero.h"
-#include "Cocinero.h"
-*/
 #include "PuntosDeBeneficio.h"
 #include "ManejadorTrabajadores.h"
 

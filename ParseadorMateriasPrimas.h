@@ -23,7 +23,8 @@ public:
     ParseadorMateriasPrimas(ColaBloqueante&& cola_agricultor,
     ColaBloqueante&& cola_leniador,ColaBloqueante&& cola_minero,
     Trigo* trigo,Madera* madera,Carbon* carbon,Hierro* hierro);
-    void parsear(const std::string nombre_entrada) override;   
+    void parsear(const std::string nombre_entrada) override;
+    ~ParseadorMateriasPrimas() {}   
 };
 
 #endif

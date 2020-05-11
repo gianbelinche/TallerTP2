@@ -12,6 +12,7 @@ public:
     inventario(inventario), puntos(puntos) {}
     virtual void producir();
     void operator()();
+    ~ProductorInterno() {}
 };
 
 #endif

@@ -2,8 +2,6 @@
 #define CLASE_PRODUCTOR
 #include <thread>
 #include "Inventario.h"
-//#include "ProductorInterno.h"
-
 
 class Productor {
 protected:

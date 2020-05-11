@@ -12,7 +12,8 @@ public:
     PuntosDeBeneficio(const PuntosDeBeneficio& copia) = delete;
     PuntosDeBeneficio& operator=(const PuntosDeBeneficio& copia) = delete;
     void aumentarPuntos(const int cant_puntos);
-    void printear() const;     
+    void printear() const;
+    ~PuntosDeBeneficio() {}     
 };
 
 #endif

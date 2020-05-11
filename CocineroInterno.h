@@ -10,6 +10,7 @@ public:
     CocineroInterno(Inventario&& inventario,PuntosDeBeneficio&& puntos) :
     ProductorInterno(std::move(inventario), std::move(puntos)) {}
     void producir() override;
+    ~CocineroInterno() {}
 };
 
 #endif
