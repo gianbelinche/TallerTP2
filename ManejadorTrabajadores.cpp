@@ -1,12 +1,12 @@
 #include "ManejadorTrabajadores.h"
 
-ManejadorTrabajadores::ManejadorTrabajadores(ParseadorTrabajadores& parseador) : 
-    vector_cocineros(parseador.cant_cocineros), 
-    vector_carpinteros(parseador.cant_carpinteros),
-    vector_armeros(parseador.cant_armeros),
-    vector_agricultores(parseador.cant_agricultores),
-    vector_lenadores(parseador.cant_lenadores),
-    vector_mineros(parseador.cant_mineros) {}
+ManejadorTrabajadores::ManejadorTrabajadores(ParseadorTrabajadores& parser) :
+    vector_cocineros(parser.cant_cocineros), 
+    vector_carpinteros(parser.cant_carpinteros),
+    vector_armeros(parser.cant_armeros),
+    vector_agricultores(parser.cant_agricultores),
+    vector_lenadores(parser.cant_lenadores),
+    vector_mineros(parser.cant_mineros) {}
 
 void ManejadorTrabajadores::iniciarTrabajadores(Inventario&& inventario, 
 PuntosDeBeneficio&& puntos, ColaBloqueante&& cola_agricultor, 

@@ -3,14 +3,13 @@
 #include <unistd.h>
 
 void CocineroInterno::producir(){
-    while(true){
+    while (true){
         try{
             inventario.extraer(this);
             usleep(60000);
             puntos.aumentarPuntos(5);
-        } catch (InventarioEstaCerradoException& e){
+        } catch(InventarioEstaCerradoException& e){
             break;
         }
     }
-    
 }

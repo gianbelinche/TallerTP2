@@ -2,14 +2,13 @@
 #include <unistd.h>
 
 void ArmeroInterno::producir(){
-    while(true){
+    while (true){
         try{
             inventario.extraer(this);
             usleep(60000);
             puntos.aumentarPuntos(3);
-        } catch (InventarioEstaCerradoException& e){
+        } catch(InventarioEstaCerradoException& e){
             break;
         }
     }
-    
 }

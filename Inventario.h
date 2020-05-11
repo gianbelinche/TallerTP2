@@ -21,6 +21,7 @@ private:
     std::mutex m;
     std::condition_variable cv;
     bool esta_cerrado;    
+
 public:
     Inventario() : cant_trigo(0), cant_madera(0),
     cant_hierro(0), cant_carbon(0), esta_cerrado(false){}
@@ -41,6 +42,5 @@ public:
     void cerrar();
     ~Inventario() {}
 };
-
 
 #endif

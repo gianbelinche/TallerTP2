@@ -2,6 +2,7 @@
 #define CLASE_PARSEADOR
 #include <iostream>
 #include <fstream>
+#include <string>
 #include "ColaBloqueante.h"
 
 class Parseador{

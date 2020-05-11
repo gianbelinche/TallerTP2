@@ -6,7 +6,7 @@ void RecolectorInterno::recolectar(){
             const Recurso* r = cola.desencolar();
             usleep(50000);
             r->agregarAInventario(std::move(inventario));
-        } catch (ColaEstaCerradaException& e) {
+        } catch(ColaEstaCerradaException& e) {
             break;
         }
     }

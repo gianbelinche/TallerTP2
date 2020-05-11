@@ -3,6 +3,7 @@
 #include "Parseador.h"
 #include <iostream>
 #include <fstream>
+#include <string>
 #include "ColaBloqueante.h"
 #include "Trigo.h"
 #include "Madera.h"

@@ -1,4 +1,5 @@
 #include "ParseadorTrabajadores.h"
+#include <string>
 
 void ParseadorTrabajadores::parsear(const std::string nombre_entrada){
     archivo.open(nombre_entrada);

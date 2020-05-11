@@ -15,7 +15,6 @@ public:
     cola(cola), inventario(inventario) {}
     void recolectar();
     void operator()();
-    
 };
 
 #endif

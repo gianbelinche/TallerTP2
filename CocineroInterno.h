@@ -12,5 +12,4 @@ public:
     void producir() override;
 };
 
-
 #endif

@@ -31,16 +31,14 @@ int main(int argc, char* argv[]){
     Hierro* hierro = new(Hierro);
     Inventario inventario;
     PuntosDeBeneficio puntos_de_beneficio;
-
     ParseadorTrabajadores parseador_trabajadores;
-    parseador_trabajadores.parsear(argv[1]);
 
+    parseador_trabajadores.parsear(argv[1]);
     ManejadorTrabajadores manejador_trabajadores(parseador_trabajadores);
     manejador_trabajadores.iniciarTrabajadores(std::move(inventario),
     std::move(puntos_de_beneficio), std::move(cola_agricultor),
     std::move(cola_lenador),std::move(cola_minero));
-
-
+    
     ParseadorMateriasPrimas parser_materias_primas(std::move(cola_agricultor),
     std::move(cola_lenador),std::move(cola_minero),
     trigo,madera,carbon,hierro);
@@ -52,7 +50,7 @@ int main(int argc, char* argv[]){
     manejador_trabajadores.terminarRecolectores();
     inventario.cerrar();
     manejador_trabajadores.terminarProductores();
-    
+
     delete trigo;
     delete madera;
     delete carbon;
@@ -61,5 +59,4 @@ int main(int argc, char* argv[]){
     puntos_de_beneficio.printear();
 
     return 0;
-
 }

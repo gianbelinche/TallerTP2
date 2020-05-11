@@ -19,13 +19,12 @@ private:
     std::vector<Minero*> vector_mineros; 
 
 public:
-    ManejadorTrabajadores(ParseadorTrabajadores& parseador);
+    explicit ManejadorTrabajadores(ParseadorTrabajadores& parseador);
     void iniciarTrabajadores(Inventario&& inventario, 
     PuntosDeBeneficio&& puntos, ColaBloqueante&& cola_agricultor, 
     ColaBloqueante&& cola_lenador, ColaBloqueante&& cola_minero);    
     void terminarRecolectores();
     void terminarProductores();
-       
 };
 
 #endif
