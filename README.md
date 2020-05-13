@@ -71,4 +71,10 @@ La clase RecolectorInterno, es la que se le pasa a los threads generados en Reco
 La clase ProductorInterno, es la que se le pasa a los threads generados en los derivados de Productor, pero cada derivado de ProductorInterno en particular, posee una logico un poquito diferente, en estos, se extrae un recurso del inventario, que depende de que ProductorInterno sea el que lo haga, y luego se aumentan la cantidad de puntos de beneficio, también dependiendo de quien lo haga.
 
 ## Diagramas
+A continuación se mostrarán varios diagramas UML, para el mas facil entendimiento del modelo.
 
+![Diagrama1](img/Diagrama1.png)
+
+![Diagrama2](img/Diagrama2.png)
+
+![Diagrama3](img/Diagrama3.png)
