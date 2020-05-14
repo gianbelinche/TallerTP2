@@ -12,6 +12,8 @@ public:
     int cant_cocineros;
     int cant_carpinteros;
     int cant_armeros;  
+    //Se encarga de procesar el archivo con nombre_entrada y
+    //inicializar las cantidades de los trabajadores
     void parsear(const std::string nombre_entrada) override;   
 };
 

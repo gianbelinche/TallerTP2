@@ -13,6 +13,9 @@ protected:
 public:
     RecolectorInterno(ColaBloqueante&& cola,Inventario&& inventario) :
     cola(cola), inventario(inventario) {}
+    //Desencola un recurso de la colaBloqueante y lo almacena en el inventario
+    //Se garantiza en ambos casos que será el único en acceder a dichos
+    //objetos mientras dure la llamada a las respectivas funciones
     void recolectar();
     void operator()();
     ~RecolectorInterno() {}

@@ -28,18 +28,21 @@ public:
     cant_hierro(0), cant_carbon(0), esta_cerrado(false){}
     Inventario(const Inventario& copia) = delete;
     Inventario& operator=(const Inventario& copia) = delete;
-
+    //Agrega al inventario una unidad del respectivo recurso
     void agregarTrigo();
     void agregarMadera();
     void agregarHierro();
     void agregarCarbon();
-
+    //Extrae del inventario los recursos que le correspondan a cada productor
+    //Si el inventario esta cerrado tira una excepción
     void extraer(const CocineroInterno* cocinero);
     void extraer(const CarpinteroInterno* carpintero);
     void extraer(const ArmeroInterno* armero);
     void extraer(const ProductorInterno* productor) const;
 
     void printear() const;
+    //Pasa el inventario al estado cerrado, que significa que ningun nuevo
+    //recurso será almacenado
     void cerrar();
     ~Inventario() {}
 };

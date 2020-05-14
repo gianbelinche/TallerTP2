@@ -17,7 +17,9 @@ public:
     Recolector& operator=(Recolector& copia) = delete;
     Recolector(Recolector&& recolector) = default;
     Recolector& operator=(Recolector&& recolector) = default;
+    //Inicializa el thread del recolector
     void empezar();
+    //Se queda esperando a que el thread finalice
     void terminar();
     ~Recolector();
 };
