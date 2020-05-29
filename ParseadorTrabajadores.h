@@ -2,10 +2,11 @@
 #define CLASE_PARSEADOR_TRABAJADORES
 
 #include <string>
-#include "Parseador.h"
+#include <fstream>
 
-class ParseadorTrabajadores : public Parseador{  
+class ParseadorTrabajadores{  
 public:
+    std::ifstream archivo;
     int cant_agricultores;
     int cant_lenadores;
     int cant_mineros;
@@ -14,7 +15,7 @@ public:
     int cant_armeros;  
     //Se encarga de procesar el archivo con nombre_entrada y
     //inicializar las cantidades de los trabajadores
-    void parsear(const std::string nombre_entrada) override;   
+    void parsear(const std::string nombre_entrada);   
 };
 
 #endif
