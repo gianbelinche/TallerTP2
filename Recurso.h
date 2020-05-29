@@ -14,7 +14,7 @@ public:
     //Se encarga de comunicarle al inventario que debe agregar un recurso
     //Cada clase derivada reimplementara esta función, para que se agregue
     //el recurso correspondiente
-    virtual void agregarAInventario(Inventario&& inventario) const {}
+    virtual void agregarAInventario(Inventario& inventario) const {}
     ~Recurso() {}
 };
 

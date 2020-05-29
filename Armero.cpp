@@ -3,8 +3,8 @@
 #include "PuntosDeBeneficio.h"
 #include "Inventario.h"
 
-Armero::Armero(Inventario&& inventario,PuntosDeBeneficio&& puntos) : 
-armero_interno(ArmeroInterno(std::move(inventario),std::move(puntos))) {}
+Armero::Armero(Inventario& inventario,PuntosDeBeneficio& puntos) : 
+armero_interno(ArmeroInterno(inventario,puntos)) {}
 
 void Armero::empezar(){
     std::thread thread(armero_interno);

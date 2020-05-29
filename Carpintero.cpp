@@ -3,8 +3,8 @@
 #include "PuntosDeBeneficio.h"
 #include "Inventario.h"
 
-Carpintero::Carpintero(Inventario&& inventario,PuntosDeBeneficio&& puntos) : 
-carpintero_interno(CarpinteroInterno(std::move(inventario),std::move(puntos))){}
+Carpintero::Carpintero(Inventario& inventario,PuntosDeBeneficio& puntos) : 
+carpintero_interno(CarpinteroInterno(inventario,puntos)){}
 
 void Carpintero::empezar(){
     std::thread thread(carpintero_interno);

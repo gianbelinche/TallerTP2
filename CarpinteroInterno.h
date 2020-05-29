@@ -7,8 +7,8 @@ class PuntosDeBeneficio;
 
 class CarpinteroInterno : public ProductorInterno {
 public:
-    CarpinteroInterno(Inventario&& inventario,PuntosDeBeneficio&& puntos) : 
-    ProductorInterno(std::move(inventario),std::move(puntos)) {}
+    CarpinteroInterno(Inventario& inventario,PuntosDeBeneficio& puntos) : 
+    ProductorInterno(inventario,puntos) {}
     void producir() override;
     ~CarpinteroInterno() {}
 };

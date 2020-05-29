@@ -11,7 +11,7 @@ class Cocinero : public Productor {
 private:
     CocineroInterno cocinero_interno;     
 public:
-    Cocinero(Inventario&& inventario,PuntosDeBeneficio&& puntos);
+    Cocinero(Inventario& inventario,PuntosDeBeneficio& puntos);
     Cocinero(Cocinero& copia) = delete;
     Cocinero& operator=(Cocinero& copia) = delete;
     Cocinero(Cocinero&& cocinero) = default;

@@ -24,12 +24,12 @@ int Iniciador::iniciar(char* argv[]){
 
     parseador_trabajadores.parsear(argv[1]);
     ManejadorTrabajadores manejador_trabajadores(parseador_trabajadores);
-    manejador_trabajadores.iniciarTrabajadores(std::move(inventario),
-    std::move(puntos_de_beneficio), std::move(cola_agricultor),
-    std::move(cola_lenador),std::move(cola_minero));
+    manejador_trabajadores.iniciarTrabajadores(inventario,
+    puntos_de_beneficio, cola_agricultor,
+    cola_lenador,cola_minero);
     
-    ParseadorMateriasPrimas parser_materias_primas(std::move(cola_agricultor),
-    std::move(cola_lenador),std::move(cola_minero),
+    ParseadorMateriasPrimas parser_materias_primas(cola_agricultor,
+    cola_lenador,cola_minero,
     &trigo,&madera,&carbon,&hierro);
     parser_materias_primas.parsear(argv[2]);
     cola_agricultor.cerrar();

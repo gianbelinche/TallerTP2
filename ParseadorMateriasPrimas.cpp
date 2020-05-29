@@ -7,12 +7,12 @@
 #include <string>
 
 ParseadorMateriasPrimas::ParseadorMateriasPrimas(
-ColaBloqueante&& cola_agricultor,
-ColaBloqueante&& cola_leniador,ColaBloqueante&& cola_minero,
+ColaBloqueante& cola_agricultor,
+ColaBloqueante& cola_leniador,ColaBloqueante& cola_minero,
 Trigo* trigo,Madera* madera,Carbon* carbon,Hierro* hierro) : 
-    cola_agricultor(std::move(cola_agricultor)),
-    cola_leniador(std::move(cola_leniador)),
-    cola_minero(std::move(cola_minero)){
+    cola_agricultor(cola_agricultor),
+    cola_leniador(cola_leniador),
+    cola_minero(cola_minero){
         this->trigo = trigo;
         this->madera = madera;
         this->carbon = carbon;

@@ -11,8 +11,8 @@ protected:
     RecolectorInterno rec_interno;
     std::thread thread;
 public:
-    Recolector(ColaBloqueante&& cola,Inventario&& inventario) : 
-    rec_interno(std::move(cola),std::move(inventario)) {}
+    Recolector(ColaBloqueante& cola,Inventario& inventario) : 
+    rec_interno(cola,inventario) {}
     Recolector(Recolector& copia) = delete;
     Recolector& operator=(Recolector& copia) = delete;
     Recolector(Recolector&& recolector) = default;

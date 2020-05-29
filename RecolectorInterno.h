@@ -11,7 +11,7 @@ protected:
     ColaBloqueante& cola;
     Inventario& inventario;
 public:
-    RecolectorInterno(ColaBloqueante&& cola,Inventario&& inventario) :
+    RecolectorInterno(ColaBloqueante& cola,Inventario& inventario) :
     cola(cola), inventario(inventario) {}
     //Desencola un recurso de la colaBloqueante y lo almacena en el inventario
     //Se garantiza en ambos casos que será el único en acceder a dichos

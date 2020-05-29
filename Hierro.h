@@ -9,7 +9,7 @@ public:
     Hierro(Hierro&& hierro) = delete;
     Hierro& operator=(Hierro&& hierro) = delete;
 
-    virtual void agregarAInventario(Inventario&& inventario) const override;
+    virtual void agregarAInventario(Inventario& inventario) const override;
     virtual ~Hierro() {}
 };
 

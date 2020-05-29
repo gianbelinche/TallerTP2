@@ -9,7 +9,7 @@ public:
     Trigo(Trigo&& trigo) = delete;
     Trigo& operator=(Trigo&& trigo) = delete;
 
-    virtual void agregarAInventario(Inventario&& inventario) const override;
+    virtual void agregarAInventario(Inventario& inventario) const override;
     virtual ~Trigo() {}
 };
 

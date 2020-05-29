@@ -11,7 +11,7 @@ class Armero : public Productor {
 private:
     ArmeroInterno armero_interno;
 public:
-    Armero(Inventario&& inventario,PuntosDeBeneficio&& puntos);
+    Armero(Inventario& inventario,PuntosDeBeneficio& puntos);
     Armero(Armero& copia) = delete;
     Armero& operator=(Armero& copia) = delete;
     Armero(Armero&& armero) = default;

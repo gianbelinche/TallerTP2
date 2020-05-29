@@ -5,8 +5,8 @@
 
 class Lenador : public Recolector{
 public:
-    Lenador(ColaBloqueante&& cola, Inventario&& inventario) :
-    Recolector(std::move(cola),std::move(inventario)) {}
+    Lenador(ColaBloqueante& cola, Inventario& inventario) :
+    Recolector(cola,inventario) {}
     ~Lenador() {}
 };
 #endif

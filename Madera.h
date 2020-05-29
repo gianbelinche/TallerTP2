@@ -9,7 +9,7 @@ public:
     Madera(Madera&& madera) = delete;
     Madera& operator=(Madera&& madera) = delete;
 
-    virtual void agregarAInventario(Inventario&& inventario) const override;
+    virtual void agregarAInventario(Inventario& inventario) const override;
     virtual ~Madera() {}
 };
 

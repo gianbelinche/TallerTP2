@@ -9,7 +9,7 @@ void RecolectorInterno::recolectar(){
         try{
             const Recurso* r = cola.desencolar();
             usleep(TIEMPO_ESPERA);
-            r->agregarAInventario(std::move(inventario));
+            r->agregarAInventario(inventario);
         } catch(ColaEstaCerradaException& e) {
             break;
         }

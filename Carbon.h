@@ -9,7 +9,7 @@ public:
     Carbon(Carbon&& carbon) = delete;
     Carbon& operator=(Carbon&& carbon) = delete;
 
-    virtual void agregarAInventario(Inventario&& inventario) const override;
+    virtual void agregarAInventario(Inventario& inventario) const override;
     virtual ~Carbon() {}
 };
 

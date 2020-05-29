@@ -27,9 +27,9 @@ public:
     explicit ManejadorTrabajadores(ParseadorTrabajadores& parseador);
     //Inicia las clases que encapsulan los threads con sus
     //correspondientes argumentos
-    void iniciarTrabajadores(Inventario&& inventario, 
-    PuntosDeBeneficio&& puntos, ColaBloqueante&& cola_agricultor, 
-    ColaBloqueante&& cola_lenador, ColaBloqueante&& cola_minero);    
+    void iniciarTrabajadores(Inventario& inventario, 
+    PuntosDeBeneficio& puntos, ColaBloqueante& cola_agricultor, 
+    ColaBloqueante& cola_lenador, ColaBloqueante& cola_minero);    
     //Comunica a los trabajadores que deben esperar a que su
     //respectivo thread termine
     void terminarRecolectores();

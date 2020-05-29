@@ -15,42 +15,42 @@ ManejadorTrabajadores::ManejadorTrabajadores(ParseadorTrabajadores& parser) :
     vector_lenadores(parser.cant_lenadores),
     vector_mineros(parser.cant_mineros) {}
 
-void ManejadorTrabajadores::iniciarTrabajadores(Inventario&& inventario, 
-PuntosDeBeneficio&& puntos, ColaBloqueante&& cola_agricultor, 
-ColaBloqueante&& cola_lenador, ColaBloqueante&& cola_minero){
+void ManejadorTrabajadores::iniciarTrabajadores(Inventario& inventario, 
+PuntosDeBeneficio& puntos, ColaBloqueante& cola_agricultor, 
+ColaBloqueante& cola_lenador, ColaBloqueante& cola_minero){
     for (unsigned int i = 0; i < vector_cocineros.size(); i++){
         Cocinero* cocinero =
-        new Cocinero(std::move(inventario),std::move(puntos));
+        new Cocinero(inventario,puntos);
         vector_cocineros[i] = cocinero;
         cocinero->empezar();
     }
     for (unsigned int i = 0; i < vector_carpinteros.size(); i++){
         Carpintero* carpintero =
-        new Carpintero(std::move(inventario),std::move(puntos));
+        new Carpintero(inventario,puntos);
         vector_carpinteros[i] = carpintero;
         carpintero->empezar();
     }
     for (unsigned int i = 0; i < vector_armeros.size(); i++){
         Armero* armero =
-        new Armero(std::move(inventario),std::move(puntos));
+        new Armero(inventario,puntos);
         vector_armeros[i] = armero;
         armero->empezar();
     }
     for (unsigned int i = 0; i < vector_agricultores.size(); i++){
         Agricultor* agr = 
-        new Agricultor(std::move(cola_agricultor),std::move(inventario));
+        new Agricultor(cola_agricultor,inventario);
         vector_agricultores[i] = agr;
         agr->empezar();
     }
     for (unsigned int i = 0; i < vector_lenadores.size(); i++){
         Lenador* lenador = 
-        new Lenador(std::move(cola_lenador),std::move(inventario));
+        new Lenador(cola_lenador,inventario);
         vector_lenadores[i] = lenador;
         lenador->empezar();
     }
     for (unsigned int i = 0; i < vector_mineros.size(); i++){
         Minero* minero =
-        new Minero(std::move(cola_minero),std::move(inventario));
+        new Minero(cola_minero,inventario);
         vector_mineros[i] = minero;
         minero->empezar();
     }

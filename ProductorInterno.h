@@ -9,7 +9,7 @@ protected:
     Inventario& inventario;
     PuntosDeBeneficio& puntos;    
 public:
-    ProductorInterno(Inventario&& inventario,PuntosDeBeneficio&& puntos) :
+    ProductorInterno(Inventario& inventario,PuntosDeBeneficio& puntos) :
     inventario(inventario), puntos(puntos) {}
     //Obtiene los recursos necesarios desde el inventario
     //Y guarda los puntos de beneficio correspondientes

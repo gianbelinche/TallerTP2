@@ -12,16 +12,16 @@ class Hierro;
 
 class ParseadorMateriasPrimas : public Parseador{
 private:
-    ColaBloqueante&& cola_agricultor;
-    ColaBloqueante&& cola_leniador;
-    ColaBloqueante&& cola_minero;
+    ColaBloqueante& cola_agricultor;
+    ColaBloqueante& cola_leniador;
+    ColaBloqueante& cola_minero;
     Trigo* trigo;
     Madera* madera;
     Carbon* carbon;
     Hierro* hierro;   
 public:
-    ParseadorMateriasPrimas(ColaBloqueante&& cola_agricultor,
-    ColaBloqueante&& cola_leniador,ColaBloqueante&& cola_minero,
+    ParseadorMateriasPrimas(ColaBloqueante& cola_agricultor,
+    ColaBloqueante& cola_leniador,ColaBloqueante& cola_minero,
     Trigo* trigo,Madera* madera,Carbon* carbon,Hierro* hierro);
     //Se encarga de procesar el archivo con nombre_entrada,
     //Y encolar los recursos a las colas correspondientes
