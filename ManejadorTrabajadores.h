@@ -6,9 +6,7 @@
 class Armero;
 class Carpintero;
 class Cocinero;
-class Agricultor;
-class Lenador;
-class Minero;
+class Recolector;
 class ParseadorTrabajadores;
 class Inventario;
 class ColaBloqueante;
@@ -19,9 +17,9 @@ private:
     std::vector<Cocinero*> vector_cocineros;
     std::vector<Carpintero*> vector_carpinteros;
     std::vector<Armero*> vector_armeros;
-    std::vector<Agricultor*> vector_agricultores;
-    std::vector<Lenador*> vector_lenadores;
-    std::vector<Minero*> vector_mineros; 
+    std::vector<Recolector*> vector_agricultores;
+    std::vector<Recolector*> vector_lenadores;
+    std::vector<Recolector*> vector_mineros; 
 
 public:
     explicit ManejadorTrabajadores(ParseadorTrabajadores& parseador);

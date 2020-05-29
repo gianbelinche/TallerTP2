@@ -1,8 +1,6 @@
 #include "ManejadorTrabajadores.h"
 #include "Armero.h"
-#include "Agricultor.h"
-#include "Minero.h"
-#include "Lenador.h"
+#include "Recolector.h"
 #include "Carpintero.h"
 #include "Cocinero.h"
 #include "ParseadorTrabajadores.h"
@@ -37,20 +35,20 @@ ColaBloqueante& cola_lenador, ColaBloqueante& cola_minero){
         armero->empezar();
     }
     for (unsigned int i = 0; i < vector_agricultores.size(); i++){
-        Agricultor* agr = 
-        new Agricultor(cola_agricultor,inventario);
+        Recolector* agr = 
+        new Recolector(cola_agricultor,inventario);
         vector_agricultores[i] = agr;
         agr->empezar();
     }
     for (unsigned int i = 0; i < vector_lenadores.size(); i++){
-        Lenador* lenador = 
-        new Lenador(cola_lenador,inventario);
+        Recolector* lenador = 
+        new Recolector(cola_lenador,inventario);
         vector_lenadores[i] = lenador;
         lenador->empezar();
     }
     for (unsigned int i = 0; i < vector_mineros.size(); i++){
-        Minero* minero =
-        new Minero(cola_minero,inventario);
+        Recolector* minero =
+        new Recolector(cola_minero,inventario);
         vector_mineros[i] = minero;
         minero->empezar();
     }
