@@ -6,7 +6,7 @@
 void CarpinteroInterno::producir(){
     while (true){
         try{
-            inventario.extraer(this);
+            inventario.extraerCarpintero();
             usleep(TIEMPO_ESPERA);
             puntos.aumentarPuntos(2);
         } catch(InventarioEstaCerradoException& e){

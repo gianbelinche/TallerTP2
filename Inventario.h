@@ -32,10 +32,9 @@ public:
     void agregarRecurso(const char recurso);
     //Extrae del inventario los recursos que le correspondan a cada productor
     //Si el inventario esta cerrado tira una excepción
-    void extraer(const CocineroInterno* cocinero);
-    void extraer(const CarpinteroInterno* carpintero);
-    void extraer(const ArmeroInterno* armero);
-    void extraer(const ProductorInterno* productor) const;
+    void extraerCocinero();
+    void extraerCarpintero();
+    void extraerArmero();
 
     void printear() const;
     //Pasa el inventario al estado cerrado, que significa que ningun nuevo

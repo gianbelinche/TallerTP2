@@ -6,7 +6,7 @@
 void CocineroInterno::producir(){
     while (true){
         try{
-            inventario.extraer(this);
+            inventario.extraerCocinero();
             usleep(TIEMPO_ESPERA);
             puntos.aumentarPuntos(5);
         } catch(InventarioEstaCerradoException& e){

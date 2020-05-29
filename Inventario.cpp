@@ -10,7 +10,7 @@ void Inventario::agregarRecurso(const char recurso){
     cv.notify_all();
 }
 
-void Inventario::extraer(const CocineroInterno* cocinero){
+void Inventario::extraerCocinero(){
     std::unique_lock<std::mutex> lk(m);
     while (!(cant_carbon >= 1 && cant_trigo >= 2)){
         if (esta_cerrado){
@@ -22,7 +22,7 @@ void Inventario::extraer(const CocineroInterno* cocinero){
     cant_carbon -= 1;
 }
 
-void Inventario::extraer(const CarpinteroInterno* carpintero){
+void Inventario::extraerCarpintero(){
     std::unique_lock<std::mutex> lk(m);
     while (!(cant_madera >= 3 && cant_hierro >= 1)){
         if (esta_cerrado){
@@ -34,7 +34,7 @@ void Inventario::extraer(const CarpinteroInterno* carpintero){
     cant_hierro -= 1;
 }
 
-void Inventario::extraer(const ArmeroInterno* armero){
+void Inventario::extraerArmero(){
     std::unique_lock<std::mutex> lk(m);
     while (!(cant_carbon >= 2 && cant_hierro >= 2)){
         if (esta_cerrado){
@@ -45,8 +45,6 @@ void Inventario::extraer(const ArmeroInterno* armero){
     cant_carbon -= 2;
     cant_hierro -= 2;
 }
-
-void Inventario::extraer(const ProductorInterno* productor) const {}
 
 void Inventario::cerrar(){
     std::unique_lock<std::mutex> lk(m);

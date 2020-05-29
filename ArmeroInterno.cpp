@@ -6,7 +6,7 @@
 void ArmeroInterno::producir(){
     while (true){
         try{
-            inventario.extraer(this);
+            inventario.extraerArmero();
             usleep(TIEMPO_ESPERA);
             puntos.aumentarPuntos(3);
         } catch(InventarioEstaCerradoException& e){
