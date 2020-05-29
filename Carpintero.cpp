@@ -2,6 +2,7 @@
 #include "CarpinteroInterno.h"
 #include "PuntosDeBeneficio.h"
 #include "Inventario.h"
+#include <utility>
 
 Carpintero::Carpintero(Inventario& inventario,PuntosDeBeneficio& puntos) : 
 carpintero_interno(CarpinteroInterno(inventario,puntos)){}

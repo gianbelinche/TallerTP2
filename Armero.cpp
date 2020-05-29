@@ -2,6 +2,7 @@
 #include "ArmeroInterno.h"
 #include "PuntosDeBeneficio.h"
 #include "Inventario.h"
+#include <utility>
 
 Armero::Armero(Inventario& inventario,PuntosDeBeneficio& puntos) : 
 armero_interno(ArmeroInterno(inventario,puntos)) {}

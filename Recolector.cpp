@@ -1,6 +1,7 @@
 #include "Recolector.h"
 #include "Inventario.h"
 #include "ColaBloqueante.h"
+#include <utility>
 
 void Recolector::empezar(){
     std::thread thread(rec_interno);
