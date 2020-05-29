@@ -7,9 +7,9 @@
 void RecolectorInterno::recolectar(){
     while (true){
         try{
-            const Recurso* r = cola.desencolar();
+            const char r = cola.desencolar();
             usleep(TIEMPO_ESPERA);
-            r->agregarAInventario(inventario);
+            inventario.agregarRecurso(r);
         } catch(ColaEstaCerradaException& e) {
             break;
         }

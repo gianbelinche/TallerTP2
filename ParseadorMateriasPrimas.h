@@ -1,6 +1,6 @@
 #ifndef CLASE_PARSEADOR_MATERIAS_PRIMAS
 #define CLASE_PARSEADOR_MATERIAS_PRIMAS
-#include "Parseador.h"
+#include <fstream>
 #include <string>
 
 class ColaBloqueante;
@@ -10,22 +10,18 @@ class Carbon;
 class Hierro;
 
 
-class ParseadorMateriasPrimas : public Parseador{
+class ParseadorMateriasPrimas{
 private:
+    std::ifstream archivo;
     ColaBloqueante& cola_agricultor;
     ColaBloqueante& cola_leniador;
-    ColaBloqueante& cola_minero;
-    Trigo* trigo;
-    Madera* madera;
-    Carbon* carbon;
-    Hierro* hierro;   
+    ColaBloqueante& cola_minero;  
 public:
     ParseadorMateriasPrimas(ColaBloqueante& cola_agricultor,
-    ColaBloqueante& cola_leniador,ColaBloqueante& cola_minero,
-    Trigo* trigo,Madera* madera,Carbon* carbon,Hierro* hierro);
+    ColaBloqueante& cola_leniador,ColaBloqueante& cola_minero);
     //Se encarga de procesar el archivo con nombre_entrada,
     //Y encolar los recursos a las colas correspondientes
-    void parsear(const std::string nombre_entrada) override;
+    void parsear(const std::string nombre_entrada);
     ~ParseadorMateriasPrimas() {}   
 };
 

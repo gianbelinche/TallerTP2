@@ -1,10 +1,6 @@
 #include "Iniciador.h"
 #include "ColaBloqueante.h"
 #include "Inventario.h"
-#include "Trigo.h"
-#include "Carbon.h"
-#include "Madera.h"
-#include "Hierro.h"
 #include "ParseadorTrabajadores.h"
 #include "ParseadorMateriasPrimas.h"
 #include "PuntosDeBeneficio.h"
@@ -14,10 +10,6 @@ int Iniciador::iniciar(char* argv[]){
     ColaBloqueante cola_agricultor;
     ColaBloqueante cola_lenador;
     ColaBloqueante cola_minero;
-    Trigo trigo;
-    Madera madera;
-    Carbon carbon;
-    Hierro hierro;
     Inventario inventario;
     PuntosDeBeneficio puntos_de_beneficio;
     ParseadorTrabajadores parseador_trabajadores;
@@ -29,8 +21,7 @@ int Iniciador::iniciar(char* argv[]){
     cola_lenador,cola_minero);
     
     ParseadorMateriasPrimas parser_materias_primas(cola_agricultor,
-    cola_lenador,cola_minero,
-    &trigo,&madera,&carbon,&hierro);
+    cola_lenador,cola_minero);
     parser_materias_primas.parsear(argv[2]);
     cola_agricultor.cerrar();
     cola_lenador.cerrar();

@@ -29,10 +29,7 @@ public:
     Inventario(const Inventario& copia) = delete;
     Inventario& operator=(const Inventario& copia) = delete;
     //Agrega al inventario una unidad del respectivo recurso
-    void agregarTrigo();
-    void agregarMadera();
-    void agregarHierro();
-    void agregarCarbon();
+    void agregarRecurso(const char recurso);
     //Extrae del inventario los recursos que le correspondan a cada productor
     //Si el inventario esta cerrado tira una excepción
     void extraer(const CocineroInterno* cocinero);

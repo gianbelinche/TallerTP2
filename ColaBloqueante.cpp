@@ -4,13 +4,13 @@
 
 ColaBloqueante::ColaBloqueante() : esta_cerrada(false){}
 
-void ColaBloqueante::encolar(const Recurso* recurso){
+void ColaBloqueante::encolar(const char recurso){
     std::unique_lock<std::mutex> lk(m);
     cola.push(recurso);
     cv.notify_all();
 }
 
-const Recurso* ColaBloqueante::desencolar(){
+const char ColaBloqueante::desencolar(){
     std::unique_lock<std::mutex> lk(m);
     while (cola.empty()){
         if (esta_cerrada){
@@ -18,7 +18,7 @@ const Recurso* ColaBloqueante::desencolar(){
         }
         cv.wait(lk);
     }
-    const Recurso* recurso = cola.front();
+    const char recurso = cola.front();
     cola.pop();
     return recurso;
 }

@@ -1,27 +1,12 @@
 #include "Inventario.h"
 #include <unistd.h>
 
-void Inventario::agregarTrigo(){
+void Inventario::agregarRecurso(const char recurso){
     std::unique_lock<std::mutex> lk(m);
-    cant_trigo++;
-    cv.notify_all();
-}
-
-void Inventario::agregarCarbon(){
-    std::unique_lock<std::mutex> lk(m);
-    cant_carbon++;
-    cv.notify_all();
-}
-
-void Inventario::agregarMadera(){
-    std::unique_lock<std::mutex> lk(m);
-    cant_madera++;
-    cv.notify_all();
-}
-
-void Inventario::agregarHierro(){
-    std::unique_lock<std::mutex> lk(m);
-    cant_hierro++;
+    if (recurso == 'T') cant_trigo++;
+    if (recurso == 'M') cant_madera++;
+    if (recurso == 'H') cant_hierro++;
+    if (recurso == 'C') cant_carbon++;
     cv.notify_all();
 }
 

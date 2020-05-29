@@ -1,23 +1,13 @@
 #include "ParseadorMateriasPrimas.h"
-#include "Trigo.h"
-#include "Madera.h"
-#include "Carbon.h"
-#include "Hierro.h"
 #include "ColaBloqueante.h"
 #include <string>
 
 ParseadorMateriasPrimas::ParseadorMateriasPrimas(
 ColaBloqueante& cola_agricultor,
-ColaBloqueante& cola_leniador,ColaBloqueante& cola_minero,
-Trigo* trigo,Madera* madera,Carbon* carbon,Hierro* hierro) : 
+ColaBloqueante& cola_leniador,ColaBloqueante& cola_minero) : 
     cola_agricultor(cola_agricultor),
     cola_leniador(cola_leniador),
-    cola_minero(cola_minero){
-        this->trigo = trigo;
-        this->madera = madera;
-        this->carbon = carbon;
-        this->hierro = hierro;
-    }
+    cola_minero(cola_minero){}
 
 void ParseadorMateriasPrimas::parsear(const std::string nombre_entrada){
     archivo.open(nombre_entrada);
@@ -25,16 +15,13 @@ void ParseadorMateriasPrimas::parsear(const std::string nombre_entrada){
     while (getline(archivo,linea)){
         for (unsigned int i = 0; i < linea.length(); i++){
             if (linea[i] == 'T'){
-                cola_agricultor.encolar(trigo);
+                cola_agricultor.encolar(linea[i]);
             }
             if (linea[i] == 'M'){
-                cola_leniador.encolar(madera);
+                cola_leniador.encolar(linea[i]);
             }
-            if (linea[i] == 'C'){
-                cola_minero.encolar(carbon);
-            }
-            if (linea[i] == 'H'){
-                cola_minero.encolar(hierro);
+            if (linea[i] == 'C' || linea[i] == 'H'){
+                cola_minero.encolar(linea[i]);
             }
         }
     }
